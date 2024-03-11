@@ -98,35 +98,35 @@ console.log(finalResult);
 // Calculate the time taken for the trip at each speed.
 // Compare the results and determine which speed makes the most sense for the trip.
 
-//// Constants
+//Constants
 const totalDistance = 1500; // miles
 const fuelBudget = 175; // $
 const averageFuelCost = 3; // $ per gallon
 
-// Fuel efficiency at different speeds
+// Fuel efficiency - miles per gallon
 const fuelEfficiency = {
-  55: 30, // miles per gallon
+  55: 30, 
   60: 28,
   75: 23,
 };
 
-// Function to calculate fuel needed for the entire trip
+// cal fuel needed for trip
 function calculateFuelNeeded(speed) {
   return totalDistance / fuelEfficiency[speed];
 }
 
-// Function to calculate fuel expense for the entire trip
+// calc fuel exp for trip
 function calculateFuelExpense(speed) {
   const fuelNeeded = calculateFuelNeeded(speed);
   return fuelNeeded * averageFuelCost;
 }
 
-// Function to calculate time taken for the trip
+// cal time
 function calculateTripTime(speed) {
   return totalDistance / speed;
 }
 
-// Calculate results for each speed
+// calc results based on speed
 const speeds = [55, 60, 75];
 speeds.forEach((speed) => {
   const fuelNeeded = calculateFuelNeeded(speed);
